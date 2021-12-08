@@ -6,16 +6,16 @@ class Person {
         this.job = job;
     }
     getName() {
-        return this.name;
+        console.log('Name: ', this.name);
     }
     getAge() {
-        return this.age;
+        console.log('Age: ', this.age);
     }
     getInterests() {
-        return this.interests;
+        console.log('Interests: ', this.interests);
     }
     getJob() {
-        return this.job;
+        console.log('Job: ', this.job);
     }
 }
 
