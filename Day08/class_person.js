@@ -20,3 +20,7 @@ class Person {
 }
 
 person1 = new Person("John", 30, ["sports", "cooking"], "teacher");
+person1.getName();
+person1.getAge();
+person1.getInterests();
+person1.getJob();
