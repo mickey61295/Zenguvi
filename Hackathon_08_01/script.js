@@ -43,3 +43,60 @@ getEntries()
     box.innerHTML = `<div>Something went wrong: ${e.message}. Please try later </div>`;
     boxSelector.appendChild(box);
   });
+
+//run the above part only when search bar value changes and any of the field {name, street, brewery_type, city, state} contains the search value
+const search = document.querySelector(".search");
+search.addEventListener("keyup", (e) => {
+  const searchValue = e.target.value.toLowerCase();
+  const boxes = document.querySelectorAll(".box-container");
+  boxes.forEach((box) => {
+    // check if {name, street, brewery_type, city, state} are null
+    let name = box.querySelector("h2")
+    let street = box.querySelector("h3:nth-child(2)")
+    let brewery_type = box.querySelector("h3:nth-child(3)")
+    let city = box.querySelector("h3:nth-child(4)")
+    let state = box.querySelector("h3:nth-child(5)")
+
+    if (name == null) {
+      name = "#";
+    } else {
+      name = name.innerText.toLowerCase();
+    }
+
+    if (street == null) {
+      street = "#";
+    } else {
+      street = street.innerText.toLowerCase();
+    }
+
+    if (brewery_type == null) {
+      brewery_type = "#";
+    } else {
+      brewery_type = brewery_type.innerText.toLowerCase();
+    }
+
+    if (city == null) {
+      city = "#";
+    } else {
+      city = city.innerText.toLowerCase();
+    }
+
+    if (state == null) {
+      state = "#";
+    } else {
+      state = state.innerText.toLowerCase();
+    }
+        
+    if (
+      name.toLowerCase().includes(searchValue) ||
+      street.toLowerCase().includes(searchValue) ||
+      brewery_type.toLowerCase().includes(searchValue) ||
+      city.toLowerCase().includes(searchValue) ||
+      state.toLowerCase().includes(searchValue)
+    ) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+});
