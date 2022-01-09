@@ -70,6 +70,7 @@ h3 {
 }
 .box-header {
   width: 100%;
+  min-width:min-content;
   padding: 2rem;
   margin-bottom: 2rem;
 }
