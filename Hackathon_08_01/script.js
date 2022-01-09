@@ -29,14 +29,16 @@ getEntries()
       </div>
     <div class="box-header">
     <div class="btn-icons">
+    `
+
     if (website_url) {
-    <a href=${website_url}><img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" alt=${website_url} id="imgcontainer"></img></a>
+    box.innerHTML+=`<a href=${website_url}><img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" alt=${website_url} id="imgcontainer"></img></a>`
     }
     if (phone) {
-    <a href="tel:${phone}"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png" alt=${phone} id="imgcontainer"></img></a>
-    }
+    box.innerHTML += `<a href="tel:${phone}"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png" alt=${phone} id="imgcontainer"></img></a>
     </div>
     `;
+    }
       boxSelector.appendChild(box);
     });
   })
