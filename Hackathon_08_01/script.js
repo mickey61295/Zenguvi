@@ -44,13 +44,11 @@ getEntries()
     boxSelector.appendChild(box);
   });
 
-//run the above part only when search bar value changes and any of the field {name, street, brewery_type, city, state} contains the search value
 const search = document.querySelector(".search");
 search.addEventListener("keyup", (e) => {
   const searchValue = e.target.value.toLowerCase();
   const boxes = document.querySelectorAll(".box-container");
   boxes.forEach((box) => {
-    // check if {name, street, brewery_type, city, state} are null
     let name = box.querySelector("h2")
     let street = box.querySelector("h3:nth-child(2)")
     let brewery_type = box.querySelector("h3:nth-child(3)")
