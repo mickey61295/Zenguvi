@@ -506,40 +506,8 @@ var itemsPerPage = numItems.options[numItems.selectedIndex].value;
 const tbody = document.getElementById('table-body');
 const pageNum = document.getElementById('custom-buttons');
 
-for (let i = 0; i < Math.ceil(data.length/itemsPerPage); i++) {
-    const page_button = document.createElement('button');
-    page_button.innerText = i+1;
-    page_button.classList.add('page-button');
-    page_button.classList.add('btn');
-    page_button.classList.add('btn-light');
-    
-    page_button.addEventListener('click', function() {
-    var all_buttons = document.getElementsByClassName('page-button');
-    for (let k = 0; k < all_buttons.length; k++) {
-        all_buttons[k].classList.remove('btn-primary');
-    }
-    tbody.innerHTML = '';
-    for (let j = 0; j < data.length; j++) {
-        if (j >= i * itemsPerPage && j < (i + 1) * itemsPerPage) {
-            page_button.classList.remove('btn-light');
-            page_button.classList.add('btn-primary');
-            const tr = document.createElement('tr');
-            const td_id = document.createElement('td');
-            td_id.classList.add('text-center');
-            const td_name = document.createElement('td');
-            const td_email = document.createElement('td');
-            td_id.innerText = data[j].id;
-            td_name.innerText = data[j].name;
-            td_email.innerText = data[j].email;
-            tr.appendChild(td_id);
-            tr.appendChild(td_name);
-            tr.appendChild(td_email);
-            tbody.appendChild(tr);
-            }
-        }
-    });
-    pageNum.appendChild(page_button);
-}
+addbuttons(itemsPerPage);
+
 
 document.getElementsByClassName('page-button')[0].click()
 
@@ -572,6 +540,13 @@ prev_button.addEventListener('click', function(){
 
 numItems.addEventListener('change', function() {
     itemsPerPage = numItems.options[numItems.selectedIndex].value;
+    addbuttons(itemsPerPage);
+    
+    first_button.click();
+  });
+
+
+function addbuttons(itemsPerPage){
     pageNum.innerHTML = '';
     for (let i = 0; i < Math.ceil(data.length/itemsPerPage); i++) {
         
@@ -607,6 +582,4 @@ numItems.addEventListener('change', function() {
             }
         });
         pageNum.appendChild(page_button);
-    }
-    first_button.click();
-  });
+}}
