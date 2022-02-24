@@ -164,4 +164,11 @@ function formData() {
         tbody.appendChild(tr);}
         
 }
-
+window.addEventListener('click', function(e){   
+  if (document.getElemensByClassName('custom-selector')[0].contains(e.target)){
+    // Clicked in box
+  } else{
+    // Clicked outside the box
+      document.getElemensByClassName('custom-selector')[0].style.display="none;
+  }
+});
