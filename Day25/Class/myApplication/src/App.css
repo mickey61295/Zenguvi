@@ -1,5 +1,5 @@
 
-.App{
+.pageContainer{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -46,3 +46,31 @@
   width: 340px;
 }
 
+.addMovie{
+  position : fixed;
+  bottom: 10%;
+  right: 2%;
+  z-index: 1;
+}
+
+.add-movie-form{
+  position: relative;
+  bottom: 10%;
+  right: 2%;
+  background-color: white;
+  padding: 10px;
+}
+
+.movieBtn{
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+
+.add-movie-form input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
