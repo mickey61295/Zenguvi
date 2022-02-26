@@ -1,0 +1,48 @@
+
+.App{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.movie-specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.movie-container {
+  /* background-color: orange; */
+  width: 340px;
+}
+
+.movie-poster {
+  width: 340px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.movie-name {
+  font-size: 24px;
+  margin: 0;
+}
+
+.movie-summary {
+  margin-top: 0;
+
+}
+
+.movie-rating {
+  font-size: 18px;
+}
+
+
+
+.add-movie-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 340px;
+}
+
