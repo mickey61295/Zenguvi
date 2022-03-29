@@ -1,13 +1,13 @@
 import { useState } from "react";
 import * as React from 'react';
-import ReactDOM from 'react-dom';
-import Button from '@mui/material/Button';
 import { Badge, IconButton } from "@mui/material";
+
 export function Counter() {
   const [like, setLike] = useState(0);
   const [dislike, setdisLike] = useState(0);
+
   return (
-    <div>
+    <div className="Counter">
       <IconButton onClick={() => setLike(like + 1)}
       className="bt-sz-lg"
       color="primary"

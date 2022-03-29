@@ -1,76 +1,115 @@
-
-.pageContainer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-
+.pageContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 10px;
 }
-.movie-specs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
+.movie-specs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .movie-container {
-  /* background-color: orange; */
-  width: 340px;
+	width: 340px;
+	min-width: 340px;
+	margin: 10px;
 }
 
 .movie-poster {
-  width: 340px;
-  height: 500px;
-  object-fit: cover;
+	width: 340px;
+	height: 500px;
+	object-fit: cover;
 }
 
 .movie-name {
-  font-size: 24px;
-  margin: 0;
+	font-size: 24px;
+	margin: 0;
 }
 
 .movie-summary {
-  margin-top: 0;
-
+	margin-top: 0;
+	padding: 16px;
+}
+.movie-detals-summary {
+	margin-top: 0;
 }
 
 .movie-rating {
-  font-size: 18px;
+	font-size: 18px;
 }
-
-
 
 .add-movie-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 340px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 340px;
 }
 
-.addMovie{
-  position : fixed;
-  bottom: 10%;
-  right: 2%;
-  z-index: 1;
+.add-movie-form {
+	position: relative;
+	bottom: 10%;
+	right: 2%;
+	background-color: white;
+	padding: 10px;
 }
 
-.add-movie-form{
-  position: relative;
-  bottom: 10%;
-  right: 2%;
-  background-color: white;
-  padding: 10px;
+.movieBtn {
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
 }
 
-.movieBtn{
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
+.add-movie-form input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
-.add-movie-form input{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.movie-detail-container {
+	max-width: 800px;
+}
+
+.AddMovie Button {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.navBar ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	padding-left: 4px;
+}
+
+.navBar li {
+	padding: 10px;
+}
+
+.deletebutton {
+	position: relative;
+	padding: 0 0 0 0;
+	left: 45%;
+	transform: translateX(-50%);
+}
+.Counter {
+	max-width: fit-content;
+	display: inline-block;
+}
+
+.navBar li a {
+	text-decoration: none;
+	color: white;
+}
+
+.display-mode {
+	margin-left: auto;
+}
+
+.error {
+	color: red;
 }

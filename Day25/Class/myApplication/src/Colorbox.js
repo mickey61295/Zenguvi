@@ -24,14 +24,14 @@ export function Colorbox() {
         >Add Color</button>
     
         {colorlist.map((item) => (
-            <Small_box color={item} />
+            <SmallBox color={item} />
         ))}
         </div>
     );
 }
 
 
-export function Small_box({color}) {
+export function SmallBox({color}) {
     const styles = {
         background: color,
         width: "300px",
