@@ -13,8 +13,7 @@ function boilerplate() {
 	title.classList.add('text-center')
 	title.innerHTML = 'Anime Database'
 	outerDiv.appendChild(title)
-
-
+}
 
 async function getData() {
 	await boilerplate()
