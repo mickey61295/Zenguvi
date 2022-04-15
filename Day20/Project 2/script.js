@@ -16,8 +16,7 @@ function boilerplate() {
 
 	const description = document.createElement('p')
 	description.classList.add('text-center')
-	description.innerHTML =
-		'This is a list of free to play games from the Giant Bomb API'
+	description.innerHTML = 'Anime Database'
 	outerDiv.appendChild(description)
 }
 
