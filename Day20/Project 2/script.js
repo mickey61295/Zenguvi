@@ -11,14 +11,10 @@ function boilerplate() {
 
 	const title = document.createElement('h1')
 	title.classList.add('text-center')
-	title.innerHTML = 'Free to Play Games Database'
+	title.innerHTML = 'Anime Database'
 	outerDiv.appendChild(title)
 
-	const description = document.createElement('p')
-	description.classList.add('text-center')
-	description.innerHTML = 'Anime Database'
-	outerDiv.appendChild(description)
-}
+
 
 async function getData() {
 	await boilerplate()

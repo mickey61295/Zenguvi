@@ -13,12 +13,6 @@ function boilerplate() {
 	title.classList.add('text-center')
 	title.innerHTML = 'Free to Play Games Database'
 	outerDiv.appendChild(title)
-
-	const description = document.createElement('p')
-	description.classList.add('text-center')
-	description.innerHTML =
-		'This is a list of free to play games from the Giant Bomb API'
-	outerDiv.appendChild(description)
 }
 
 async function getData() {
