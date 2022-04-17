@@ -83,5 +83,18 @@ db.movies.find({}, { _id: 0, name: 1, rating: 1 }).sort({rating:-1,name:1}).pret
 
 db.movies.find({}, { _id: 0, name: 1, rating: 1 }).sort({rating:-1,name:1}).limit(2).pretty()
 
+// mongodb command to update BaahuBali rating to 8.5
+db.movies.updateOne({ name: 'Baahubali' }, { $set: { rating: 8.5 } })
+
+// mongodb command to delete all movies with rating greater than 8.6
+db.movies.deleteMany({ rating: { $gt: 8.6 } })
+
+// create language field in movies collection
+db.movies.updateMany({}, { $set: { language: 'English' } })
+
+// Find movies with id 102 and 105
+db.movies.find({ id: { $in: ['102', '105'] } }).pretty()
 
 
+//delete all entries in collection
+db.movies.deleteMany({})
