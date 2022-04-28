@@ -20,7 +20,6 @@ async function createConnection() {
 	return client
 }
 
-
 const client = await createConnection()
 
 // Add express middleware to parse JSON bodies automatically
@@ -28,8 +27,13 @@ const client = await createConnection()
 app.use(express.json())
 
 // Read collection from MongoDB
-const movies = client.db('classMongo').collections.movies
+const movies = await client
+	.db('classMongo')
+	.collection('movies')
+	.find({})
+	.toArray()
 
+console.log('Movies collection:', movies)
 // Basic request handler
 app.get('/', function (req, res) {
 	res.send('Hello World')
@@ -37,7 +41,6 @@ app.get('/', function (req, res) {
 
 app.get('/movies', function (req, res) {
 	const { rating } = req.query
-
 	rating
 		? res.send(
 				movies.filter((movie) => {

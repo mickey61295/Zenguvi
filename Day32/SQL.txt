@@ -1,0 +1,26 @@
+#Create Users Table
+CREATE TABLE users(userid INTEGER AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR,
+useremail VARCHAR,
+batchid INTEGER);
+
+#Create Codekata Table
+CREATE TABLE codekata(userid INTEGER,
+number_of_problems_solved INTEGER, 
+FOREIGN KEY (userid)
+REFERENCES users(userid));
+
+#Create company_drives Table
+CREATE TABLE company_drives(driveid INTEGER AUTO_INCREMENT PRIMARY KEY,
+userid INTEGER,
+drive_date DATE,
+company VARCHAR,
+FOREIGN KEY (userid)
+REFERENCES users(userid));
+
+#Create mentors Table
+CREATE TABLE mentors(mentorid INTEGER AUTO_INCREMENT PRIMARY KEY,
+mentorname VARCHAR,
+ mentoremail VARCHAR);
+
+
