@@ -36,13 +36,6 @@ app.post('/createroom', (req, res) => {
 	}
 })
 
-// 	2. Booking a Room with
-// 		a. Customer Name
-// 		b. Date
-// 		c. Start Time
-// 		d. End Time
-// 		e. Room ID
-
 app.post('/bookroom', (req, res) => {
 	const { name, date, startTime, endTime, roomId } = req.body
 	let key = []
@@ -69,14 +62,6 @@ app.post('/bookroom', (req, res) => {
 	}
 })
 
-// 	3. List all Rooms with booked status as true
-// 		a. Room Name
-// 		b. booked Status
-// 		c. customer name
-// 		d. Date
-// 		e. Start Time
-// 		f. End Time
-
 app.get('/bookedrooms', (req, res) => {
 	let bookedRooms = []
 	rooms.forEach((room) => {
@@ -93,13 +78,6 @@ app.get('/bookedrooms', (req, res) => {
 	})
 	res.send(bookedRooms)
 })
-
-// 	4. List all customers with booked Data with
-// 		a. Customer name
-// 		b. Room Name
-// 		c. Date
-// 		d. Start Time
-//      e. End Time
 
 app.get('/bookedcustomers', (req, res) => {
 	let bookedCustomers = []
