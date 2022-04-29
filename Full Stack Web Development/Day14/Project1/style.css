@@ -1,0 +1,8 @@
+.enclosure{
+    display: inline;
+}
+@media only screen and (max-width: 600px) {
+    .enclosure{
+        width: 100%;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id= "title">Kimetsu No Yaiba Season 2 Feedback Form</h1>
+        <p id= "description" style="font-size: large ;color: rgb(131, 32, 32);"><strong>Inspiration and ideas and structure are from a Feedback form of a fan page</strong></p>
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-1 col-xl-2"></div><!--Empty column-->
+
+            <div class="col-sm-9 col-md-9 col-lg-7 col-xl-8"><!--Form-->
+                <form id="survey-container">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="name" class="form-control" placeholder="Enter name" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age (optional)</label>
+                        <input type="age" class="form-control" placeholder="Enter age" id="age">
+                    </div>
+                    <label for= "dropdown">What would you rate this anime?</label>
+                    <select class="custom-select" id="dropdown" name="rating">
+                        <option disabled value="select a rating">Select a rating</option>
+                        <option value="Bad">Bad</option>
+                        <option value="Mediocre">Mediocre</option>
+                        <option value="Good">Good</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Anime of the Year">Anime of the Year</option>
+                    </select>
+                    <p>Would you recommend Kami no Tou to a friend?</p>
+                    <div class="form-check">
+                        <label class="form-check-label" for="definitely">
+                            <input type="radio" class="form-check-input" id="definitely" name="optradio" value="definitely">Definitely
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="probably">
+                            <input type="radio" class="form-check-input" id="probably" name="optradio" value="probably">Probably
+                        </label>
+                    </div>
+                    <div class="form-check" id="not-sure">
+                        <label class="form-check-label" for="not-sure">
+                            <input type="radio" class="form-check-input" id="not-sure" name="optradio" value="not sure">Not sure
+                        </label>
+                    </div>
+                    <label for= "dropdown">Who is your favorite character?</label>
+                    <select class="custom-select" id="dropdown" name="favorite">
+                        <option disabled selected value="pick a character">Pick a character</option>
+                        <option value="tanjiro">Tanjiro</option>
+                        <option value="zenitsu">Zenitsu</option>
+                        <option value="innosuke">Innosuke</option>
+                        <option value="tengen">Tengen</option>
+                        <option value="gyutaro">Gyutaro</option>
+                        <option value="daki">Daki</option>
+                        <option value="douma">Douma</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <p>What would you like to see improved in 3nd season compared to this one? (Check all that apply)</p>
+                    <div class="form-check">
+                        <label class="form-check-label" for="music">
+                          <input type="checkbox" class="form-check-input" id="music" name="option1" value="music">Music
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label" for="art">
+                          <input type="checkbox" class="form-check-input" id="art" name="option2" value="art">Art
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label" for="animation">
+                          <input type="checkbox" class="form-check-input" id="animation" name="option3" value="animation">Animation
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label" for="op-ed">
+                          <input type="checkbox" class="form-check-input" id="op-ed" name="option4" value="op & ed">OP & ED
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label" for="pacing">
+                          <input type="checkbox" class="form-check-input" id="pacing" name="option5" value="pacing">Pacing
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Any comments or suggestions? (Optional)</label>
+                        <textarea class="form-control" rows="5" id="comment" name="text" placeholder= "Enter your comment here..."></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-warning" style="width: 100%;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>
