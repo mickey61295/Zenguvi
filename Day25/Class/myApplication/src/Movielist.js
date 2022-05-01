@@ -15,6 +15,7 @@ export function Movielist() {
 			.then((data) => setMovieList(data))
 	}
 	useEffect(() => getMovies(), [])
+	movieList ? console.log(movieList) : console.log('Loading')
 
 	const navigate = useNavigate()
 
@@ -23,15 +24,15 @@ export function Movielist() {
 			<div className="pageContainer">
 				{movieList.map((item, index) => (
 					<Profile
-						key={item.id}
+						key={item.name}
 						movie={item}
 						id={item.id}
 						deleteButton={
 							<Button
 								onClick={() => {
-									fetch(`${API}/${item.id}`, { method: 'DELETE' }).then(() =>
-										getMovies()
-									)
+									fetch(`${API}/deletemovie/${item.name}`, {
+										method: 'DELETE',
+									}).then(() => getMovies())
 								}}
 								className="deletebutton"
 								color="error"

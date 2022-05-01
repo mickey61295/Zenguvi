@@ -44,7 +44,7 @@ function EditMovieForm({ movie }) {
 	const id = movie.id
 	const navigate = useNavigate()
 	const editMovie = (values) => {
-		fetch(`${API}/${id}`, {
+		fetch(`${API}/editmovie/${id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',
